@@ -2,6 +2,7 @@ import sqlite3
 import os
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+from flask import send_from_directory
 
 app = Flask(__name__)
 CORS(app)
@@ -89,6 +90,10 @@ def unsubscribe():
     conn.commit()
     conn.close()
     return f'<p style="font-family:sans-serif;padding:2rem">Unsubscribed {email}.</p>'
+
+@app.route('/')
+def index():
+    return send_from_directory('.', 'index.html')
 
 
 if __name__ == '__main__':
