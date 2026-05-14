@@ -142,6 +142,6 @@ def unsubscribe():
 # ── Start the server ──────────────────────────────────────────────────────────
 
 if __name__ == '__main__':
-    init_db()  # Set up the database tables on first run
+    init_db()
     print("🚀 FlightDrop server running at http://localhost:5000")
-   app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)), debug=False)
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)), debug=False)
