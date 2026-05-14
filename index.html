@@ -245,7 +245,7 @@
       try {
         // Send the data as JSON to our Flask backend
         // CHANGE THIS URL to your deployed server address
-        const response = await fetch('http://localhost:5000/subscribe', {
+        const response = await fetch('https://flightdrop-production-fad4.up.railway.app/subscribe', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data),
