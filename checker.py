@@ -204,14 +204,9 @@ def run_check():
 
 
 if __name__ == '__main__':
-    # OPTION A — run once (good for testing)
-    run_check()
-
-    # OPTION B — run every 4 hours forever
-    # Uncomment below and comment out run_check() above
-    #
-    # CHECK_EVERY_HOURS = 4
-    # while True:
-    #     run_check()
-    #     print(f"⏰ Next check in {CHECK_EVERY_HOURS} hours...")
+    CHECK_EVERY_HOURS = 4
+    while True:
+        run_check()
+        print(f"Next check in {CHECK_EVERY_HOURS} hours...")
+        time.sleep(CHECK_EVERY_HOURS * 60 * 60)
     #     time.sleep(CHECK_EVERY_HOURS * 60 * 60)
