@@ -1,0 +1,7 @@
+# Python packages needed — install with:
+#   pip install -r requirements.txt
+
+flask==3.0.3
+flask-cors==4.0.1
+requests==2.32.3
+python-dotenv==1.0.1
